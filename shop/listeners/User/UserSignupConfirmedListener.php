@@ -16,6 +16,6 @@ class UserSignupConfirmedListener
 
     public function handle(UserSignUpConfirmed $event): void
     {
-        $this->newsletter->subscribe($event->user->email);
+//        $this->newsletter->subscribe($event->user->email);
     }
 }
