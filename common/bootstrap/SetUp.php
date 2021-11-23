@@ -90,12 +90,12 @@ class SetUp implements BootstrapInterface
             new ShopInfo($app->name, $app->name, $app->params['frontendHostInfo']),
         ]);
 
-//        $container->setSingleton(Newsletter::class, function () use ($app) {
-//            return new MailChimp(
-//                new \DrewM\MailChimp\MailChimp($app->params['mailChimpKey']),
-//                $app->params['mailChimpListId']
-//            );
-//        });
+        $container->setSingleton(Newsletter::class, function () use ($app) {
+            return new MailChimp(
+                new \DrewM\MailChimp\MailChimp($app->params['mailChimpKey']),
+                $app->params['mailChimpListId']
+            );
+        });
 
         $container->setSingleton(SmsSender::class, function () use ($app) {
             return new LoggedSender(
