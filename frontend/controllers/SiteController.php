@@ -32,11 +32,6 @@ class SiteController extends Controller
     {
 
 
-            print_r(\Yii::$app->security->generatePasswordHash('shokhaa'));
-            die();
-            if ($user->save()) {
-                echo 'good';
-            }
         $this->layout = 'home';
         return $this->render('index');
     }
