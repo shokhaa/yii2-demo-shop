@@ -6,7 +6,6 @@ use shop\entities\User\User;
 use shop\forms\manage\User\UserCreateForm;
 use shop\forms\manage\User\UserEditForm;
 use shop\repositories\UserRepository;
-use shop\services\newsletter\Newsletter;
 use shop\services\RoleManager;
 use shop\services\TransactionManager;
 
@@ -15,22 +14,17 @@ class UserManageService
     private $repository;
     private $roles;
     private $transaction;
-    /**
-     * @var Newsletter
-     */
-    private $newsletter;
+
 
     public function __construct(
         UserRepository $repository,
         RoleManager $roles,
         TransactionManager $transaction,
-        Newsletter $newsletter
     )
     {
         $this->repository = $repository;
         $this->roles = $roles;
         $this->transaction = $transaction;
-        $this->newsletter = $newsletter;
     }
 
     public function create(UserCreateForm $form): User
