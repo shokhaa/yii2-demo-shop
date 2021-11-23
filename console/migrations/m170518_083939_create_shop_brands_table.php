@@ -15,7 +15,7 @@ class m170518_083939_create_shop_brands_table extends Migration
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
             'slug' => $this->string()->notNull(),
-            'meta_json' => $this->json()->notNull(),
+            'meta_json' => $this->text()->notNull(),
         ], $tableOptions);
 
         $this->createIndex('{{%idx-shop_brands-slug}}', '{{%shop_brands}}', 'slug', true);
