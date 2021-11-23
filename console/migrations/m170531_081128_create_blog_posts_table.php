@@ -17,7 +17,7 @@ class m170531_081128_create_blog_posts_table extends Migration
             'content' => 'MEDIUMTEXT',
             'photo' => $this->string(),
             'status' => $this->integer()->notNull(),
-            'meta_json' => 'JSON NOT NULL',
+            'meta_json' => $this->text()->null(),
         ], $tableOptions);
 
         $this->createIndex('{{%idx-blog_posts-category_id}}', '{{%blog_posts}}', 'category_id');

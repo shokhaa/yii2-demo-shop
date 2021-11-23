@@ -17,7 +17,7 @@ class m170519_085957_create_shop_characteristics_table extends Migration
             'type' => $this->string(16)->notNull(),
             'required' => $this->boolean()->notNull(),
             'default' => $this->string(),
-            'variants_json' => 'JSON NOT NULL',
+            'variants_json' => $this->text()->null(),
             'sort' => $this->integer()->notNull(),
         ], $tableOptions);
     }

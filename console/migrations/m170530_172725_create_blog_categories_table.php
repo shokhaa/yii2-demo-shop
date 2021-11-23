@@ -15,7 +15,7 @@ class m170530_172725_create_blog_categories_table extends Migration
             'title' => $this->string(),
             'description' => $this->text(),
             'sort' => $this->integer()->notNull(),
-            'meta_json' => 'JSON NOT NULL',
+            'meta_json' => $this->text()->null(),
         ], $tableOptions);
 
         $this->createIndex('{{%idx-blog_categories-slug}}', '{{%blog_categories}}', 'slug', true);

@@ -13,7 +13,7 @@ class m170531_133531_create_pages_table extends Migration
             'title' => $this->string()->notNull(),
             'slug' => $this->string()->notNull(),
             'content' => 'MEDIUMTEXT',
-            'meta_json' => 'JSON NOT NULL',
+            'meta_json' => $this->text()->null(),
             'lft' => $this->integer()->notNull(),
             'rgt' => $this->integer()->notNull(),
             'depth' => $this->integer()->notNull(),
