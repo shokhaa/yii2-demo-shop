@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use shop\entities\User\User;
 use yii\web\Controller;
 
 /**
@@ -29,6 +30,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
+
+            print_r(\Yii::$app->security->generatePasswordHash('shokhaa'));
+            die();
+            if ($user->save()) {
+                echo 'good';
+            }
         $this->layout = 'home';
         return $this->render('index');
     }
