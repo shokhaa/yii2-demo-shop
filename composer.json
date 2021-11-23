@@ -18,7 +18,7 @@
         "yiisoft/yii2": "~2.0.43",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "dmstr/yii2-adminlte-asset": "^2.4",
+        "dmstr/yii2-adminlte-asset": "^2.7.0-beta1",
         "webmozart/assert": "*",
         "la-haute-societe/yii2-save-relations-behavior": "^1.2",
         "yiisoft/yii2-authclient": "^2.1",
