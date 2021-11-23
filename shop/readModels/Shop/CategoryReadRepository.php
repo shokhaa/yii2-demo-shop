@@ -53,6 +53,7 @@ class CategoryReadRepository
             $query->andWhere(['depth' => 1]);
         }
 
+        return $query->all();
         $aggs = $this->client->search([
             'index' => 'shop',
             'type' => 'products',

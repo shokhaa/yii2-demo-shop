@@ -4,14 +4,14 @@ namespace frontend\urls;
 
 use shop\entities\Page;
 use shop\readModels\PageReadRepository;
+use yii\base\BaseObject;
 use yii\base\InvalidParamException;
-use yii\base\Object;
 use yii\caching\Cache;
 use yii\helpers\ArrayHelper;
 use yii\web\UrlNormalizerRedirectException;
 use yii\web\UrlRuleInterface;
 
-class PageUrlRule extends Object implements UrlRuleInterface
+class PageUrlRule extends BaseObject implements UrlRuleInterface
 {
     private $repository;
     private $cache;
