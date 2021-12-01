@@ -23,6 +23,7 @@ class CategoriesWidget extends Widget
     public function run(): string
     {
 
+        echo "<pre>";
         print_r($this->categories->getTreeWithSubsOf($this->active));
         die();
         return Html::tag('div', implode(PHP_EOL, array_map(function (Category $category) {
