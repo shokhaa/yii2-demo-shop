@@ -23,7 +23,7 @@ class CategoriesWidget extends Widget
 
     public function run(): string
     {
-        return Html::tag('div', implode(PHP_EOL, array_map(function (Category $view) {
+        return Html::tag('div', implode(PHP_EOL, array_map(function (CategoryView $view) {
             $indent = ($view->category->depth > 1 ? str_repeat('&nbsp;&nbsp;&nbsp;', $view->category->depth - 1) . '- ' : '');
             $active = $this->active && ($this->active->id == $view->category->id || $this->active->isChildOf($view->category));
             return Html::a(
