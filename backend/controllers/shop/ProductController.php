@@ -110,11 +110,7 @@ class ProductController extends Controller
                 Yii::$app->session->setFlash('error', $e->getMessage());
             }
         }
-       if ($_POST){
-           print_r($form->load(Yii::$app->request->post()));
-           print_r($form);
-           die();
-       }
+
         return $this->render('create', [
             'model' => $form,
         ]);
