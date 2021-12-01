@@ -22,6 +22,9 @@ class CategoriesWidget extends Widget
 
     public function run(): string
     {
+
+        print_r($this->categories->getTreeWithSubsOf($this->active));
+        die();
         return Html::tag('div', implode(PHP_EOL, array_map(function (Category $category) {
             $indent = ($category->depth > 1 ? str_repeat('&nbsp;&nbsp;&nbsp;', $category->depth - 1) . '- ' : '');
             $active = $this->active && ($this->active->id == $category->id || $this->active->isChildOf($category));
