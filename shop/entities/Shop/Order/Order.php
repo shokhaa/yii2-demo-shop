@@ -21,11 +21,12 @@ use yii\helpers\Json;
  * @property int $note
  * @property int $current_status
  * @property string $cancel_reason
- * @property CustomerData $customerData
- * @property DeliveryData $deliveryData
- *
  * @property OrderItem[] $items
- * @property Status[] $statuses
+ * @property string $statuses_json
+ * @property string $customer_phone [varchar(255)]
+ * @property string $customer_name [varchar(255)]
+ * @property string $delivery_index [varchar(255)]
+ * @property string $delivery_address
  */
 class Order extends ActiveRecord
 {
